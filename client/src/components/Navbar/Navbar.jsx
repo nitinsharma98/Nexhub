@@ -9,7 +9,13 @@ import { useNavigate } from "react-router";
 
 const Navbar = ({theme , setTheme , user}) =>{             // other than toggle i copy grom gpt for outside click to hide
 
-    const profp ="https://tse1.mm.bing.net/th/id/OIP.Kiidro98U3GN-0gOU259UwHaHa?pid=Api&P=0&h=180" ;
+    const profp = "https://tse1.mm.bing.net/th/id/OIP.Kiidro98U3GN-0gOU259UwHaHa?pid=Api&P=0&h=180";    // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
+
+
+
+
+
+    
     const [showMenu, setShowMenu] = useState('none');
     const navigate = useNavigate();
 
@@ -20,8 +26,6 @@ const Navbar = ({theme , setTheme , user}) =>{             // other than toggle 
             setShowMenu('none');
         }
     };
-
-    
 
     const menuRef = useRef(null);  
     const buttonRef = useRef(null); 
@@ -44,10 +48,6 @@ const Navbar = ({theme , setTheme , user}) =>{             // other than toggle 
             document.removeEventListener("mousedown", handleClickOutside);
         };
     }, []);
-
-   
-        
-        document.addEventListener("mousedown", handleClickOutside);
 
 
     const handleLogout = async () => {
