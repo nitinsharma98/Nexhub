@@ -9,7 +9,11 @@ import { useNavigate } from "react-router";
 
 const Navbar = ({theme , setTheme , user}) =>{             // other than toggle i copy grom gpt for outside click to hide
 
-    const profp = user.profilePic;
+    const [profp , setprofp] =useState ;
+    const sp = async () =>{
+        await setprofp( user.profilePic);
+    }
+    
     const [showMenu, setShowMenu] = useState('none');
     const navigate = useNavigate();
 
@@ -42,6 +46,12 @@ const Navbar = ({theme , setTheme , user}) =>{             // other than toggle 
             document.removeEventListener("mousedown", handleClickOutside);
         };
     }, []);
+
+    useEffect(()=>{
+            sp();
+        },[]);
+        
+        document.addEventListener("mousedown", handleClickOutside);
 
 
     const handleLogout = async () => {
