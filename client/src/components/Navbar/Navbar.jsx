@@ -9,7 +9,7 @@ import { useNavigate } from "react-router";
 
 const Navbar = ({theme , setTheme , user}) =>{             // other than toggle i copy grom gpt for outside click to hide
 
-    const [profp , setprofp] =useState ;
+    const [profp , setprofp] =useState() ;
     // const profp = user.profilePic;
     const [showMenu, setShowMenu] = useState('none');
     const navigate = useNavigate();
