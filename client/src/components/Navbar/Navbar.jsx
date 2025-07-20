@@ -10,7 +10,6 @@ import { useNavigate } from "react-router";
 const Navbar = ({theme , setTheme , user}) =>{             // other than toggle i copy grom gpt for outside click to hide
 
     const [profp , setprofp] =useState() ;
-    // const profp = user.profilePic;
     const [showMenu, setShowMenu] = useState('none');
     const navigate = useNavigate();
 
@@ -22,16 +21,18 @@ const Navbar = ({theme , setTheme , user}) =>{             // other than toggle 
         }
     };
 
-     const sp = async () =>{
-        await setprofp( user.profilePic);
-    }
+    
 
     const menuRef = useRef(null);  
     const buttonRef = useRef(null); 
 
-     useEffect(()=>{
-            sp();
-        },[]);
+     useEffect(() => {
+          if (user?.profilePic) {
+            setprofp(user.profilePic);
+          } else {
+            setprofp(null); // or set a default image
+          }
+        }, [user]);
 
         useEffect(() => {
         const handleClickOutside = (event) => {
