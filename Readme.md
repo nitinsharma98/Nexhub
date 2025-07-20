@@ -21,8 +21,10 @@ Replication work ==>
 
 Issues ==>  (less styling capability)
 1. Navbar of homepage and headerbar of small screen not shown at once in good way
-2. Somewhere click outside to hide shown components like coments , headerbar ---- logout by gpt
-3. App.jsx comment alert again in some cases
+2. Refresh and share features stop working due to axios and cors config uploading combine *****
+3. Somewhere click outside to hide shown components like coments , headerbar ---- logout by gpt
+4. App.jsx comment alert again in some cases
+5. User/me profile pic in 1st docs local not shiw 
 ----
 1. Due to less time i give some where default where image already exists so sometimes we can not able to see pic in future i will solve it 
 2. After signup always navigate directly not req login  ,   after any submission go to the page to see that.
