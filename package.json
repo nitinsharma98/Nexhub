@@ -1,0 +1,14 @@
+{
+  "name": "nexhub",
+  "version": "1.0.0",
+  "description": "Future Scopes ==>\r 1. Adding Search bar\r 2. One to one Chats\r 3. Download full code folders (idea of storing folders)\r 4. Direct files upload like pic with cloudinary\r --\r 1. Copy btn for codes\r 2. More Documentation added b website + add more base codes and data \r 3. Scrolling more than one images for code posts",
+  "main": "index.js",
+  "scripts": {
+   "build": "npm install --prefix server && npm install --prefix client && npm run build --prefix client",
+   "start":"npm run start --prefix  server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
